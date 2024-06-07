@@ -347,31 +347,10 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <configuration>
-            <failOnError>false</failOnError>
-          </configuration>
         </plugin>
-        <plugin>
-          <groupId>org.apache.rat</groupId>
-          <artifactId>apache-rat-plugin</artifactId>
-          <configuration>
-            <excludes combine.children="append">
-              <exclude>.checkstyle</exclude>
-              <exclude>**/*.odg</exclude>
-              <exclude>src/test/resources/**</exclude>
-              <exclude>src/main/resources/default-server-root/**</exclude>
-              <exclude>src/main/resources/ssh-keys/**</exclude>
-              <exclude>src/test/ssh-keys/**</exclude>
-              <exclude>.repository/**</exclude><!-- for CI -->
-              <exclude>out/**</exclude> <!-- for intellij -->
-            </excludes>
-          </configuration>
-        </plugin>
-        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
-          <version>1.0.0</version>
           <configuration>
             <lifecycleMappingMetadata>
               <pluginExecutions>
@@ -390,8 +369,12 @@ under the License.
                 </pluginExecution>
               </pluginExecutions>
             </lifecycleMappingMetadata>
+            
           </configuration>
+          <version>1.0.0</version>
         </plugin>
+        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+        
       </plugins>
     </pluginManagement>
     <plugins>
